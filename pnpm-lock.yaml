@@ -8,9 +8,15 @@ dependencies:
   '@clerk/nextjs':
     specifier: ^4.23.2
     version: registry.npmmirror.com/@clerk/nextjs@4.23.2(next@13.4.13)(react-dom@18.2.0)(react@18.2.0)
+  '@hookform/resolvers':
+    specifier: ^3.2.0
+    version: registry.npmmirror.com/@hookform/resolvers@3.2.0(react-hook-form@7.45.4)
   '@radix-ui/react-dialog':
     specifier: ^1.0.4
     version: registry.npmmirror.com/@radix-ui/react-dialog@1.0.4(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/react-label':
+    specifier: ^2.0.2
+    version: registry.npmmirror.com/@radix-ui/react-label@2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: registry.npmmirror.com/@radix-ui/react-slot@1.0.2(@types/react@18.2.20)(react@18.2.0)
@@ -53,6 +59,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
+  react-hook-form:
+    specifier: ^7.45.4
+    version: registry.npmmirror.com/react-hook-form@7.45.4(react@18.2.0)
   tailwind-merge:
     specifier: ^1.14.0
     version: registry.npmmirror.com/tailwind-merge@1.14.0
@@ -65,6 +74,9 @@ dependencies:
   typescript:
     specifier: 5.1.6
     version: registry.npmmirror.com/typescript@5.1.6
+  zod:
+    specifier: ^3.21.4
+    version: registry.npmmirror.com/zod@3.21.4
   zustand:
     specifier: ^4.4.1
     version: registry.npmmirror.com/zustand@4.4.1(@types/react@18.2.20)(react@18.2.0)
@@ -230,6 +242,17 @@ packages:
     name: '@eslint/js'
     version: 8.47.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  registry.npmmirror.com/@hookform/resolvers@3.2.0(react-hook-form@7.45.4):
+    resolution: {integrity: sha512-skXQHhLxq0Sz2xDwCyv5dygBCtXJe1GmWwxDzfdtl0X6agD6qcyTG8HrZWkjJoy8AkiLARqYvSYJ8z7+Nwmi7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@hookform/resolvers/-/resolvers-3.2.0.tgz}
+    id: registry.npmmirror.com/@hookform/resolvers/3.2.0
+    name: '@hookform/resolvers'
+    version: 3.2.0
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: registry.npmmirror.com/react-hook-form@7.45.4(react@18.2.0)
     dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array@0.11.10:
@@ -640,6 +663,30 @@ packages:
       '@radix-ui/react-use-layout-effect': registry.npmmirror.com/@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.20)(react@18.2.0)
       '@types/react': registry.npmmirror.com/@types/react@18.2.20
       react: registry.npmmirror.com/react@18.2.0
+    dev: false
+
+  registry.npmmirror.com/@radix-ui/react-label@2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-N5ehvlM7qoTLx7nWPodsPYPgMzA5WM8zZChQg8nyFJKnDO5WHdba1vv5/H6IO5LtJMfD2Q3wh1qHFGNtK0w3bQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@radix-ui/react-label/-/react-label-2.0.2.tgz}
+    id: registry.npmmirror.com/@radix-ui/react-label/2.0.2
+    name: '@radix-ui/react-label'
+    version: 2.0.2
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': registry.npmmirror.com/@babel/runtime@7.22.10
+      '@radix-ui/react-primitive': registry.npmmirror.com/@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': registry.npmmirror.com/@types/react@18.2.20
+      '@types/react-dom': registry.npmmirror.com/@types/react-dom@18.2.7
+      react: registry.npmmirror.com/react@18.2.0
+      react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   registry.npmmirror.com/@radix-ui/react-portal@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
@@ -3345,6 +3392,18 @@ packages:
       loose-envify: registry.npmmirror.com/loose-envify@1.4.0
       react: registry.npmmirror.com/react@18.2.0
       scheduler: registry.npmmirror.com/scheduler@0.23.0
+    dev: false
+
+  registry.npmmirror.com/react-hook-form@7.45.4(react@18.2.0):
+    resolution: {integrity: sha512-HGDV1JOOBPZj10LB3+OZgfDBTn+IeEsNOKiq/cxbQAIbKaiJUe/KV8DBUzsx0Gx/7IG/orWqRRm736JwOfUSWQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-hook-form/-/react-hook-form-7.45.4.tgz}
+    id: registry.npmmirror.com/react-hook-form/7.45.4
+    name: react-hook-form
+    version: 7.45.4
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: registry.npmmirror.com/react@18.2.0
     dev: false
 
   registry.npmmirror.com/react-is@16.13.1:
