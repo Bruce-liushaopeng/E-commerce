@@ -39,8 +39,8 @@ dependencies:
     specifier: 13.4.13
     version: registry.npmmirror.com/eslint-config-next@13.4.13(eslint@8.47.0)(typescript@5.1.6)
   lucide-react:
-    specifier: ^0.265.0
-    version: registry.npmmirror.com/lucide-react@0.265.0(react@18.2.0)
+    specifier: ^0.263.1
+    version: registry.npmmirror.com/lucide-react@0.263.1(react@18.2.0)
   next:
     specifier: 13.4.13
     version: registry.npmmirror.com/next@13.4.13(react-dom@18.2.0)(react@18.2.0)
@@ -65,6 +65,9 @@ dependencies:
   typescript:
     specifier: 5.1.6
     version: registry.npmmirror.com/typescript@5.1.6
+  zustand:
+    specifier: ^4.4.1
+    version: registry.npmmirror.com/zustand@4.4.1(@types/react@18.2.20)(react@18.2.0)
 
 packages:
 
@@ -2793,11 +2796,11 @@ packages:
       yallist: registry.npmmirror.com/yallist@4.0.0
     dev: false
 
-  registry.npmmirror.com/lucide-react@0.265.0(react@18.2.0):
-    resolution: {integrity: sha512-znyvziBEUQ7CKR31GiU4viomQbJrpDLG5ac+FajwiZIavC3YbPFLkzQx3dCXT4JWJx/pB34EwmtiZ0ElGZX0PA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lucide-react/-/lucide-react-0.265.0.tgz}
-    id: registry.npmmirror.com/lucide-react/0.265.0
+  registry.npmmirror.com/lucide-react@0.263.1(react@18.2.0):
+    resolution: {integrity: sha512-keqxAx97PlaEN89PXZ6ki1N8nRjGWtDa4021GFYLNj0RgruM5odbpl8GHTExj0hhPq3sF6Up0gnxt6TSHu+ovw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lucide-react/-/lucide-react-0.263.1.tgz}
+    id: registry.npmmirror.com/lucide-react/0.263.1
     name: lucide-react
-    version: 0.265.0
+    version: 0.263.1
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -4068,6 +4071,17 @@ packages:
       tslib: registry.npmmirror.com/tslib@2.6.1
     dev: false
 
+  registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz}
+    id: registry.npmmirror.com/use-sync-external-store/1.2.0
+    name: use-sync-external-store
+    version: 1.2.0
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: registry.npmmirror.com/react@18.2.0
+    dev: false
+
   registry.npmmirror.com/util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/util-deprecate/-/util-deprecate-1.0.2.tgz}
     name: util-deprecate
@@ -4161,4 +4175,27 @@ packages:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zod/-/zod-3.21.4.tgz}
     name: zod
     version: 3.21.4
+    dev: false
+
+  registry.npmmirror.com/zustand@4.4.1(@types/react@18.2.20)(react@18.2.0):
+    resolution: {integrity: sha512-QCPfstAS4EBiTQzlaGP1gmorkh/UL1Leaj2tdj+zZCZ/9bm0WS7sI2wnfD5lpOszFqWJ1DcPnGoY8RDL61uokw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zustand/-/zustand-4.4.1.tgz}
+    id: registry.npmmirror.com/zustand/4.4.1
+    name: zustand
+    version: 4.4.1
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': registry.npmmirror.com/@types/react@18.2.20
+      react: registry.npmmirror.com/react@18.2.0
+      use-sync-external-store: registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0)
     dev: false
