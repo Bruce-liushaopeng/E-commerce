@@ -10,18 +10,19 @@ export default async function SetupLayout({
 }) {
   const { userId } = auth();
 
+  // if no user logedin, we redirect to sign-in page
   if (!userId) {
     redirect("/sign-in");
   }
 
   // show the user the first store they have in their DB
-
   const store = await prismadb.store.findFirst({
     where: {
       userId,
     },
   });
 
+  // redirect the user to their first store
   if (store) {
     redirect(`/${store.id}`);
   }

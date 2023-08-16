@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
 
 // minimum one character is required to name our store
@@ -43,9 +44,10 @@ export const StoreModal = () => {
     try {
       setLoading(true);
       const response = await axios.post('/api/store', values);
-
-      // use the id we get from response to direct to a new route
-      toast.success("Store created.")
+      // we not using next redirect, because this is going to do a complete refresh on the page.
+      // But router, there will be case where data won't be synced
+      // after create store, immediately redirect
+      window.location.assign(`/${response.data.id}`);
     } catch (error) {
       toast.error('Something went wrong');
     } finally {
