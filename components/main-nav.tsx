@@ -10,30 +10,35 @@ function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
 
   const routes = [
     {
-        // we are using this mainNav inside the dashboard layout
-        // so even tho main-nav is in the components folder, 
-        // we can still find storeId in the parameters 
-        href: `/${params.storeId}/settings`,
-        label: 'Setting',
-        active: pathname === `/${params.storeId}/settings`
-    }
+      href: `/${params.storeId}`,
+      label: "Overview",
+      active: pathname === `/${params.storeId}`,
+    },
+    {
+      // we are using this mainNav inside the dashboard layout
+      // so even tho main-nav is in the components folder,
+      // we can still find storeId in the parameters
+      href: `/${params.storeId}/settings`,
+      label: "Setting",
+      active: pathname === `/${params.storeId}/settings`,
+    },
   ];
   return (
-    <nav
-      className={cn("flex items-center space-x-4 lg:space-x-6", className)}
-    >
-        {routes.map((route) => (
-            <Link 
-                key={route.href}
-                href={route.href}
-                className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
-                    route.active ? "text-black dark:text-white" : "text-muted-foreground"
-                )}
-            >
-                { route.label }
-            </Link>
-        ))}
+    <nav className={cn("flex items-center space-x-4 lg:space-x-6", className)}>
+      {routes.map((route) => (
+        <Link
+          key={route.href}
+          href={route.href}
+          className={cn(
+            "text-sm font-medium transition-colors hover:text-primary",
+            route.active
+              ? "text-black dark:text-white"
+              : "text-muted-foreground"
+          )}
+        >
+          {route.label}
+        </Link>
+      ))}
     </nav>
   );
 }

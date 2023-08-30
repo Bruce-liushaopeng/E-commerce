@@ -22,6 +22,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
+import { ApiAlert } from "@/components/ui/api-alert";
 
 interface SettingsFormProps {
   initialData: Store;
@@ -62,10 +63,10 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/store/${params.storeId}`)
-      router.refresh()
-      router.push('/') // we can direct the user to other existing store
-      toast.success("store deleted") 
+      await axios.delete(`/api/store/${params.storeId}`);
+      router.refresh();
+      router.push("/"); // we can direct the user to other existing store
+      toast.success("store deleted");
     } catch (error) {
       // safety mechanism
       // our relation in prisma is going to control this, to ensure the safety
@@ -124,6 +125,12 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
           </Button>
         </form>
       </Form>
+      <Separator />
+      <ApiAlert
+        title="NEXT_PUBLIC_API_URL"
+        description="test-des"
+        variant="public"
+      />
     </>
   );
 };
