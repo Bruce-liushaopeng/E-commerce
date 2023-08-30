@@ -15,6 +15,11 @@ function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
       active: pathname === `/${params.storeId}`,
     },
     {
+      href: `/${params.storeId}/billboards`,
+      label: "Billboards",
+      active: pathname === `/${params.storeId}/billboards`,
+    },
+    {
       // we are using this mainNav inside the dashboard layout
       // so even tho main-nav is in the components folder,
       // we can still find storeId in the parameters
