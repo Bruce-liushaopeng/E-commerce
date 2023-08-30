@@ -31,29 +31,31 @@ interface BillboardFormProps {
 
 const formSchema = z.object({
   label: z.string().min(1),
-  imageUrl: z.string().min(1)
+  imageUrl: z.string().min(1),
 });
 
 // infer the type of data contained in the formSchema
 type BillboardFormValues = z.infer<typeof formSchema>;
 
-export const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
+export const BillboardForm: React.FC<BillboardFormProps> = ({
+  initialData,
+}) => {
   const params = useParams();
   const router = useRouter();
   const origin = useOrigin();
 
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const title = initialData ? 'Edit billboard' : "Create billboard"
-  const description = initialData ? 'Edit a billboard' : "Add a new billboard"
-  const toastMessage = initialData ? 'Billboard updated' : "Billboard created."
-  const action = initialData ? 'Save changes' : "Create"
+  const title = initialData ? "Edit billboard" : "Create billboard";
+  const description = initialData ? "Edit a billboard" : "Add a new billboard";
+  const toastMessage = initialData ? "Billboard updated" : "Billboard created.";
+  const action = initialData ? "Save changes" : "Create";
 
   const form = useForm<BillboardFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
-        label: '',
-        imageUrl: ''
+      label: "",
+      imageUrl: "",
     },
   });
 
@@ -96,14 +98,16 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => 
       />
       <div className="flex items-center justify-between">
         <Heading title={title} description={description} />
-        <Button
-          disabled={loading}
-          variant={"destructive"}
-          size="sm"
-          onClick={() => setOpen(true)}
-        >
-          <Trash className="h-4 w-4" />
-        </Button>
+        {initialData && (
+          <Button
+            disabled={loading}
+            variant={"destructive"}
+            size="sm"
+            onClick={() => setOpen(true)}
+          >
+            <Trash className="h-4 w-4" />
+          </Button>
+        )}
       </div>
       <Separator />
       <Form {...form}>
