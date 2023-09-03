@@ -76,7 +76,7 @@ export async function GET(
 
         return NextResponse.json(colors);
     } catch (error) {
-        console.log('[COLOR_POST]', error);
+        console.log('[COLOR_GET]', error);
         return new NextResponse("Internal error", { status: 500 })
     }
 }
