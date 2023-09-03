@@ -1,6 +1,17 @@
-const HomePage = () => {
+import getBillboard from "@/actions/get-billboard";
+import Billboard from "@/components/billboard";
+import Container from "@/components/ui/container";
+
+export const revalidate = 0;
+
+const HomePage = async () => {
+    const billboard = await getBillboard('8210f37c-5657-4ac2-af00-806f1b0b96ab')
     return (
-        <div>Hello Store</div>
+        <Container>
+            <div className="space-y-10 pb-10">
+                <Billboard data={billboard} />
+            </div>
+        </Container>
     );
 }
  
