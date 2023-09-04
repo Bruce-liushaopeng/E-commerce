@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@headlessui/react':
+    specifier: ^1.7.17
+    version: registry.npmmirror.com/@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0)
   '@types/node':
     specifier: 20.5.9
     version: registry.npmmirror.com/@types/node@20.5.9
@@ -123,6 +126,21 @@ packages:
     name: '@eslint/js'
     version: 8.48.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  registry.npmmirror.com/@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@headlessui/react/-/react-1.7.17.tgz}
+    id: registry.npmmirror.com/@headlessui/react/1.7.17
+    name: '@headlessui/react'
+    version: 1.7.17
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: registry.npmmirror.com/client-only@0.0.1
+      react: registry.npmmirror.com/react@18.2.0
+      react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array@0.11.11:
