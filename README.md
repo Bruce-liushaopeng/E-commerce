@@ -1,6 +1,12 @@
 # E-commerce
 E-commerce site has two parts, Admin Page and Store Front
 
+## Tech Stack
+- **Front-End**: React, Next, Shadcn
+- **Back-End**: Next, Prisma, MySQL
+- **Database Hosting**: PlanetScale
+- **Image Hosting**: Cloudinary
+- **Purchase API**: Stripe
 # Store Front
 
  1. Store front allowing user to view and purchase items
